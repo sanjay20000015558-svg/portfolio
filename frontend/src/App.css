@@ -1,0 +1,18 @@
+#root {
+  min-height: 100%;
+}
+
+.horizontal-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  height: 100vh;
+}
+
+.panel {
+  width: 100vw;        /* each page = full screen */
+  height: 100vh;
+  flex-shrink: 0;
+  overflow-y: auto;    /* inner vertical scroll if needed */
+  overflow-x: hidden;
+}

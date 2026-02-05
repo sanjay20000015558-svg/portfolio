@@ -1,0 +1,70 @@
+.about-section {
+  padding: 90px 24px;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.about-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 36px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.about-card h3 {
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+
+.about-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.about-item:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.about-item p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.highlight {
+  color: #dbe1e0;
+  font-weight: 500;
+}
+
+/* ONLY CGPA COLOR CHANGE */
+.highlight.cgpa {
+ color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+}

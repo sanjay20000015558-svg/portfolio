@@ -1,0 +1,30 @@
+.resume-cta {
+  padding: 100px 24px;
+  background: linear-gradient(135deg, #7c5cff, #b76cff);
+  color: #fff;
+  text-align: center;
+}
+
+.resume-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.resume-content h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.resume-content p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin-bottom: 36px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .resume-content h2 {
+    font-size: 30px;
+  }
+}

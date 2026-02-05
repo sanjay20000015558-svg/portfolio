@@ -1,0 +1,25 @@
+.section {
+  padding: 120px 10%;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.section.animate {
+  animation: fadeSection 1.2s ease forwards;
+}
+
+@keyframes fadeSection {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  html, body {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+  }
+}
