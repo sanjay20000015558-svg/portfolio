@@ -21,7 +21,7 @@ export default function Signup() {
 
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/signup`,
+        "https://portfolio-eta-two-94.vercel.app/api/auth/signup",
         {
           method: "POST",
           headers: {

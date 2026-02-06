@@ -7,7 +7,6 @@ export default function Login() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  // ✅ SHOW LOGOUT SUCCESS
   useEffect(() => {
     if (localStorage.getItem("logoutSuccess") === "true") {
       setMessage("✅ Logout Successful");
@@ -16,13 +15,12 @@ export default function Login() {
     }
   }, []);
 
-  // ✅ FIXED LOGIN (API)
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        "https://portfolio-eta-two-94.vercel.app/api/auth/login",
         {
           method: "POST",
           headers: {
@@ -39,7 +37,6 @@ export default function Login() {
         return;
       }
 
-      // ✅ SAVE LOGIN INFO
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("isLoggedIn", "true");
@@ -56,7 +53,6 @@ export default function Login() {
       <form onSubmit={handleLogin} style={styles.form}>
         <h2>Login</h2>
 
-        {/* ✅ LOGOUT MESSAGE */}
         {message && <div style={styles.popup}>{message}</div>}
 
         <input
@@ -81,7 +77,6 @@ export default function Login() {
           Login
         </button>
 
-        {/* ✅ NEW USER SIGN UP */}
         <div style={styles.signupText}>
           New user?{" "}
           <Link to="/signup" style={styles.signupLink}>
@@ -112,8 +107,6 @@ const styles = {
     gap: "14px",
     width: "300px",
     color: "#fff",
-    backdropFilter: "blur(16px)",
-    animation: "float 6s ease-in-out infinite",
   },
   popup: {
     textAlign: "center",
@@ -130,7 +123,6 @@ const styles = {
     border: "1px solid rgba(255,255,255,0.15)",
     background: "rgba(2,6,23,0.6)",
     color: "#fff",
-    outline: "none",
   },
   button: {
     marginTop: "8px",
@@ -145,8 +137,6 @@ const styles = {
   signupText: {
     textAlign: "center",
     fontSize: "14px",
-    marginTop: "6px",
-    opacity: 0.9,
   },
   signupLink: {
     color: "#a78bfa",
