@@ -1,4 +1,3 @@
-// src/pages/Signup.jsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -21,19 +20,22 @@ export default function Signup() {
     }
 
     try {
-      const res = await fetch("http://localhost:5001/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName,
-          otherName,
-          email,
-          phone,
-          password,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/signup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            otherName,
+            email,
+            phone,
+            password,
+          }),
+        }
+      );
 
       const data = await res.json();
 
@@ -121,7 +123,7 @@ export default function Signup() {
   );
 }
 
-/* ================= STYLES ================= */
+/* ================= STYLES (UNCHANGED) ================= */
 
 const styles = {
   container: {
